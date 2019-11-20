@@ -107,6 +107,13 @@ int qr_code_data_list_extract_text(const qr_code_data_list *_qrlist,
       sa_size=1;
     }
 
+	/*Step 0.5: Check for all split symbols detected.*/
+	for (j = 0; j < sa_size; ++j)
+	  if (sa[j] < 0)
+	    break;
+	if (j != sa_size) // Not all split symbols were detected.
+      continue;
+
     sa_ctext=0;
     fnc1=0;
     fnc1_2ai=0;
