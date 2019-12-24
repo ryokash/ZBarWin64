@@ -667,7 +667,7 @@ match_segment (zbar_decoder_t *dcode,
 static __inline unsigned
 lookup_sequence (databar_segment_t *seg,
                  int fixed,
-                 int seq[22])
+                 int seq[23])
 {
     unsigned n = seg->data / 211, i;
     const unsigned char *p;
@@ -709,7 +709,7 @@ match_segment_exp (zbar_decoder_t *dcode,
                    int dir)
 {
     databar_decoder_t *db = &dcode->databar;
-    int bestsegs[22], i = 0, segs[22], seq[22];
+    int bestsegs[22], i = 0, segs[22], seq[23];
 	ptrdiff_t ifixed = seg - db->segs, fixed = IDX(seg), maxcnt = 0;
     int iseg[DATABAR_MAX_SEGMENTS];
     unsigned csegs = db->csegs, width = seg->width, maxage = 0x7fff;
