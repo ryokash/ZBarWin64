@@ -40,6 +40,7 @@ zbar_image_scanner_get_results
 zbar_image_scanner_recycle_image
 zbar_image_scanner_set_config
 zbar_image_scanner_set_data_handler
+zbar_image_set_crop
 zbar_image_set_data
 zbar_image_set_format
 zbar_image_set_sequence
